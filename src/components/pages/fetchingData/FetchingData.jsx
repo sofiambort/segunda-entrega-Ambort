@@ -1,42 +1,42 @@
-import { useEffect, useState } from "react";
-import Albums from "./Albums";
-import axios from "axios";
+// import { useEffect, useState } from "react";
+// import Albums from "./Albums";
+// import axios from "axios";
 
-const FetchingData = () => {
-  const [albums, setAlbums] = useState([]);
+// const FetchingData = () => {
+//   const [albums, setAlbums] = useState([]);
 
-  console.log({ albums });
+//   console.log({ albums });
 
-  useEffect(() => {
-    // const tarea = fetch("https://jsonplaceholder.typicode.com/albums");
+//   useEffect(() => {
+//     // const tarea = fetch("https://jsonplaceholder.typicode.com/albums");
 
-    // tarea
-    //   .then((res) => res.json())
-    //   .then((res) => setAlbums(res))
-    //   .catch((err) => console.log(err));
+//     // tarea
+//     //   .then((res) => res.json())
+//     //   .then((res) => setAlbums(res))
+//     //   .catch((err) => console.log(err));
 
-    const tarea = axios.get("https://jsonplaceholder.typicode.com/albums");
-    tarea.then((res) => console.log(res.data));
-  }, []);
+//     const tarea = axios.get("https://jsonplaceholder.typicode.com/albums");
+//     tarea.then((res) => console.log(res.data));
+//   }, []);
 
-  const crear = () => {
-    // fetch("https://jsonplaceholder.typicode.com/albums/15", {
-    //   method: "PUT",
-    //   body: JSON.stringify({
-    //     userId: 2,
-    //     title: "Album modificado",
-    //   }),
-    // headers: {
-    //   "authorization": "ishdflfhdw524"
-    // } NO LO NECESITO PORQUE NO ES UNA URL PRIVADA
+//   const crear = () => {
+//     // fetch("https://jsonplaceholder.typicode.com/albums/15", {
+//     //   method: "PUT",
+//     //   body: JSON.stringify({
+//     //     userId: 2,
+//     //     title: "Album modificado",
+//     //   }),
+//     // headers: {
+//     //   "authorization": "ishdflfhdw524"
+//     // } NO LO NECESITO PORQUE NO ES UNA URL PRIVADA
 
-    axios.post("https://jsonplaceholder.typicode.com/albums", {
-      userId: 2,
-      title: "Album modificado",
-    });
-  };
+//     axios.post("https://jsonplaceholder.typicode.com/albums", {
+//       userId: 2,
+//       title: "Album modificado",
+//     });
+//   };
 
-  return <Albums albums={albums} crear={crear} />;
-};
+//   return <Albums albums={albums} crear={crear} />;
+// };
 
-export default FetchingData;
+// export default FetchingData;

@@ -2,8 +2,6 @@ import ProductCard from "../../../common/productCard/ProductCard";
 import "./ItemListContainer.css";
 
 const ItemList = ({ items }) => {
-  console.log(items[0]?.title);
-
   return (
     <>
       <section className="lista-productos">

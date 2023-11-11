@@ -21,7 +21,7 @@ const ItemListContainer = () => {
       consulta = query(
         productCollection,
         where("category", "==", categoryName)
-      ); //que vas a comparar / como lo vas a comparar y contra quien lo vas a comparar
+      );
     }
 
     getDocs(consulta).then((res) => {
@@ -56,8 +56,6 @@ const ItemListContainer = () => {
           alt="icono-wpp"
         />
       </div>
-
-      {/* {items.length > 0 && <h3>Ya termino de cargar</h3>} */}
     </>
   );
 };

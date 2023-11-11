@@ -151,11 +151,9 @@ const CheckOut = () => {
             </span>
 
             <button disabled={!canBuy}>COMPRAR</button>
-            {/* este ya viene por defecto con el type submit */}
             <button type="button" onClick={() => console.log("se cancelo")}>
               CANCELAR
             </button>
-            {/* a este hay que aclararle que es de type button */}
           </form>
 
           <div className="whatsapp-container">

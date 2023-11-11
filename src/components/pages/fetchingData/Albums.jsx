@@ -1,9 +1,9 @@
-const Albums = ({ album, crear }) => {
-  return (
-    <div>
-      <button onClick={crear}>Crear Informacion</button>
-    </div>
-  );
-};
+// const Albums = ({ album, crear }) => {
+//   return (
+//     <div>
+//       <button onClick={crear}>Crear Informacion</button>
+//     </div>
+//   );
+// };
 
-export default Albums;
+// export default Albums;

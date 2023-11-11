@@ -12,8 +12,6 @@ const ItemDatailContainer = () => {
 
   const { id } = useParams();
 
-  // const navigate = useNavigate();
-
   const { addToCart, getQuantityById } = useContext(CartContext);
 
   let totalQuantity = getQuantityById(id);
@@ -43,10 +41,6 @@ const ItemDatailContainer = () => {
       showConfirmButton: false,
       timer: 1500,
     });
-
-    // setTimeout(() => {
-    //   navigate("/cart");
-    // }, 1000);
 
     setShowCounter(false);
   };

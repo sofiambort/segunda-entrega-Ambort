@@ -1,4 +1,3 @@
-//ESTE ES EL COMPONENTE PROVEEDOR DEL CONTEXTO
 import { createContext, useState } from "react";
 
 export const CartContext = createContext();
@@ -8,7 +7,6 @@ const CartContextComponent = ({ children }) => {
     JSON.parse(localStorage.getItem("cart")) || []
   );
 
-  //ESTA ES TODA LA LOGICA PARA AGREGAR UN ELEMENTO A UN ARREGLO
   const addToCart = (product) => {
     let exist = isInCart(product.id);
     if (exist) {
@@ -39,8 +37,6 @@ const CartContextComponent = ({ children }) => {
     return product?.quantity;
   };
 
-  //obtener el total del carrito
-
   const getTotalPrice = () => {
     let total = cart.reduce((acc, elemento) => {
       return acc + elemento.price * elemento.quantity;
@@ -49,22 +45,16 @@ const CartContextComponent = ({ children }) => {
     return total;
   };
 
-  //poder borrar un elemento particualar del carrito
-
   const deleteProductById = (id) => {
     let newArr = cart.filter((product) => product.id !== id);
     setCart(newArr);
     localStorage.setItem("cart", JSON.stringify(newArr));
   };
 
-  //limpiar el carrito
-
   const clearCart = () => {
     setCart([]);
     localStorage.removeItem("cart");
   };
-
-  //obtener la cantidad de elementos
 
   const getTotalQuantity = () => {
     let total = cart.reduce((acc, elemento) => {
