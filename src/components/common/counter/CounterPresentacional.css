@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "fontCounter";
+  src: url(../../../../public/fonts/letters_for_learners/Letters\ for\ Learners.ttf);
+}
+
+.boton-restar {
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: rgba(163, 53, 112, 0.533);
+  background-color: linen;
+  color: rgba(163, 53, 112, 0.533);
+}
+
+.boton-sumar {
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: rgba(163, 53, 112, 0.533);
+  background-color: linen;
+  color: rgba(163, 53, 112, 0.533);
+}
+
+.boton-agregar-carrito {
+  height: 1.875rem;
+  border-radius: 5px;
+  border: 2px;
+  background-color: purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: linen;
+  font-size: 1.125rem;
+  width: 9.375rem;
+}

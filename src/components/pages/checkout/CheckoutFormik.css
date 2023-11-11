@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "fuenteGeneral";
+  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.icon-wpp {
+  width: 40px;
+  height: auto;
+}

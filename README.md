@@ -1,8 +1,41 @@
-# React + Vite
+# Mi primer e-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## <<Vivero un jardín para Artemisa>>
 
-Currently, two official plugins are available:
+![](https://res.cloudinary.com/duu1rotxg/image/upload/v1695576333/logo_wqbusk.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Herramientas que utilizo en mi e-commerce:
+
+- HTML5
+- CSS3
+- JavaScript
+- React js
+- Formik
+- Material UI (MUI)
+- React Icons
+- SweetAlert
+- Firebase
+
+[Link del website "Vivero un jardin para Artemisa"]()
+
+## Instalaciones:
+
+```
+npm install @mui/material
+```
+
+```
+npm install sweetalert2
+```
+
+```
+npm install firebase
+```
+
+```
+npm install formik
+```
+
+```
+npm install react-icons --save
+```

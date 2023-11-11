@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "fuenteGeneral";
+  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
+}
+.contenedor-detalle {
+  display: flex;
+  gap: 3.125rem;
+  padding: 6.25rem;
+  border: solid 0.0625rem;
+  border-color: rgba(250, 240, 230, 0.63);
+  margin: 1.25rem;
+  font-family: "fuenteGeneral", sans-serif;
+  color: black;
+  background-color: linen;
+}
+
+.imagen-planta {
+  width: 300px;
+  height: auto;
+  display: flex;
+  border-radius: 0.3125rem;
+  border: solid 1px;
+  border-color: lightgray;
+}
+
+.titulo-datail {
+  display: flex;
+  justify-content: center;
+  padding-top: 3.125rem;
+  border-bottom: solid 0.0625rem;
+  padding-bottom: 0.625rem;
+  border-color: black;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+
+.description-datail {
+  padding: 3.125rem;
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.icon-wpp {
+  width: 40px;
+  height: auto;
+}
+
+.description-price {
+  padding-bottom: 30px;
+  padding-left: 3.125rem;
+}

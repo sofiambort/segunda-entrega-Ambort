@@ -1,36 +1,64 @@
-import { useEffect, useState } from "react";
-import { products } from "../../../productsMock";
+import { useContext, useEffect, useState } from "react";
 import ItemDatail from "./ItemDatail";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"; //si uso el navigate, ponerlo aca
+import { CartContext } from "../../../context/CartContext";
+import Swal from "sweetalert2";
+import { baseDatos } from "../../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDatailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
+  const [showCounter, setShowCounter] = useState(true);
 
   const { id } = useParams();
 
+  // const navigate = useNavigate();
+
+  const { addToCart, getQuantityById } = useContext(CartContext);
+
+  let totalQuantity = getQuantityById(id);
+
   useEffect(() => {
-    let producto = products.find((product) => product.id === +id);
+    let itemCollection = collection(baseDatos, "products");
 
-    const getProduct = new Promise((resolve, reject) => {
-      resolve(producto);
-      reject("Error");
+    let refDoc = doc(itemCollection, id);
+
+    getDoc(refDoc).then((res) => {
+      setProductSelected({ id: res.id, ...res.data() });
     });
-
-    getProduct
-      .then((res) => setProductSelected(res))
-      .catch((err) => console.log(err));
   }, [id]);
 
   const onAdd = (cantidad) => {
-    let obj = {
+    let item = {
       ...productSelected,
       quantity: cantidad,
     };
 
-    console.log("Este es el producto que se agrega", obj);
+    addToCart(item);
+
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Se agregó al carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    // setTimeout(() => {
+    //   navigate("/cart");
+    // }, 1000);
+
+    setShowCounter(false);
   };
 
-  return <ItemDatail productSelected={productSelected} onAdd={onAdd} />;
+  return (
+    <ItemDatail
+      productSelected={productSelected}
+      onAdd={onAdd}
+      initial={totalQuantity}
+      showCounter={showCounter}
+    />
+  );
 };
 
 export default ItemDatailContainer;

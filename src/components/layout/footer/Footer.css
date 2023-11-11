@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "fuente";
+  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
+}
+
+.footer-container {
+  width: 100%;
+  background-color: Linen;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "fuente";
+}
+
+.footer-effect {
+  transition: color 0.3s, border-bottom 0.3s;
+  color: rgb(50, 49, 49);
+}
+
+.footer-effect:hover {
+  color: rgb(162, 73, 164);
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}

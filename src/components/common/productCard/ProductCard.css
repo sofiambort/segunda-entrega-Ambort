@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "fuenteCard";
+  src: url(../../../../public/fonts/kg_midnight_memories/KGMidnightMemories.ttf);
+}
+.nueva-fuente {
+  font-family: "fuenteCard", sans-serif;
+}
+.animacion-card {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

@@ -6,19 +6,7 @@ const ItemList = ({ items }) => {
 
   return (
     <>
-      <div className="welcome">
-        {/* <h4>Bienvenidos a nuestro vivero</h4>
-        <h4>{vivero}</h4> */}
-      </div>
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "30px",
-        }}
-      >
+      <section className="lista-productos">
         {items.map((item) => {
           return <ProductCard key={item.id} item={item} />;
         })}

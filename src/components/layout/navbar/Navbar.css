@@ -1,22 +1,37 @@
+@font-face {
+  font-family: "fuenteGeneral";
+  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
+}
+
 .navbar {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  background-color: rgba(250, 235, 215, 0.216);
+  background-color: Linen;
   height: 6.875rem;
   margin-top: 1.25rem;
+  font-family: "fuenteGeneral", sans-serif;
+  gap: none;
+  transition: 0.3s ease;
+  position: fixed;
+  z-index: 100;
+  margin-top: 0;
+}
+
+.scrolled {
+  background-color: rgba(250, 240, 230, 0.548);
 }
 
 .navbar ul {
   display: flex;
-  justify-content: space-between;
+  margin-left: 9.375rem;
 }
 
 .navbar li {
   list-style: none;
   padding: 1.25rem;
   padding-top: 3.125rem;
-  padding-left: 5rem;
+  padding-right: 9.375rem;
   transition: color 0.3s, border-bottom 0.3s;
   color: rgb(101, 98, 98);
 }
@@ -37,4 +52,8 @@
 .logo:hover {
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
 }

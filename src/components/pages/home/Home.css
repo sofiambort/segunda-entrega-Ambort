@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "fuente";
+  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
+}
+
+@keyframes abrirCortina {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animacion-img {
+  animation: abrirCortina 2s ease-in-out;
+}
+.portada {
+  width: 100%;
+  height: auto;
+  margin-top: 1.875rem;
+}
+.img-carrusel {
+  width: 90%;
+  height: 18.75rem;
+}
+
+.carrusel {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(12, 12, 12, 0.416);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.main {
+  padding-top: 8.75rem;
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.icon-wpp {
+  width: 40px;
+  height: auto;
+}

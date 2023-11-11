@@ -1,11 +1,29 @@
+import { useState, useEffect } from "react";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <Link className="navbar">
+      <Link className={`navbar ${scrolling ? "scrolled" : ""}`}>
         <Link to={"/"}>
           <img
             className="logo"
@@ -14,17 +32,17 @@ export function Navbar() {
           />
         </Link>
         <ul>
-          <Link to={"/category/interior"}>
+          <Link to={"/category/Interior"}>
             <li>INTERIOR</li>
           </Link>
-          <Link to={"/category/exterior"}>
+          <Link to={"/category/Exterior"}>
             <li>EXTERIOR</li>
           </Link>
-          <Link to={"/category/mantenimiento"}>
+          <Link to={"/category/Mantenimiento"}>
             <li>MANTENIMIENTO</li>
           </Link>
-          <Link to={"/category/decorativo"}>
-            <li>DECORATIVO</li>
+          <Link to={"/category/Ambientación"}>
+            <li>AMBIENTACIÓN</li>
           </Link>
         </ul>
         <CartWidget />
