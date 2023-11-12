@@ -79,8 +79,6 @@ const CheckOut = () => {
       setErrors({ ...errors, email: "No corresponde a un email valido" });
       return;
     }
-
-    console.log(userInfo);
   };
 
   return (
