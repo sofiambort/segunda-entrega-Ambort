@@ -38,7 +38,7 @@
 
 .description-datail {
   padding: 3.125rem;
-  color: rgba(128, 0, 128, 0.662);
+  color: gray;
 }
 
 .whatsapp-container {
@@ -97,6 +97,15 @@
 }
 
 @media (max-width: 768px) {
+  .contenedor-detalle {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 0.625rem;
+    justify-items: center;
+    gap: 0rem;
+    height: auto;
+  }
   .imagen-planta {
     width: 15.625rem;
   }
