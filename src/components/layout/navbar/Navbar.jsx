@@ -4,7 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
-import "./NavBar.css";
+import "./Navbar.css";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import TemporaryDrawer from "./TemporaryDrawer";
 

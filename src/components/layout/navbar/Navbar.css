@@ -57,10 +57,6 @@
 a {
   text-decoration: none;
 }
-@font-face {
-  font-family: "fuenteGeneral";
-  src: url(../../../../public/fonts/saudagar/Saudagar.ttf);
-}
 
 .navbar {
   display: flex;
