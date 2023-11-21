@@ -134,17 +134,16 @@
     height: 180px;
   }
   .contenedor-datos {
-    justify-items: center;
+    flex-direction: column;
+    padding-left: 15.625rem;
   }
   .envios {
     border-right: 0rem;
     padding-right: 0px;
-    border-right: solid 0.0625rem;
   }
   .medios-pago {
     border-right: 0px;
     padding-right: 0px;
-    border-right: solid 0.0625rem;
   }
   .mapa {
     width: 70%;

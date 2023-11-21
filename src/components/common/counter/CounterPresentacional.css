@@ -87,6 +87,9 @@
     align-items: center;
     gap: 1.25rem;
   }
+  .boton-agregar-carrito {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 425px) {
