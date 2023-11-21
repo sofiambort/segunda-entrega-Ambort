@@ -1,4 +1,13 @@
-import { Button, IconButton } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
@@ -51,38 +60,55 @@ const Cart = () => {
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      <h2
+      <h2 className="title-product-cart">PRODUCTOS EN TU CARRITO</h2>
+      <div
         style={{
-          fontFamily: "fuenteCart",
-          padding: "30px",
-          color: "linen",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "center",
-          paddingTop: "160px",
+          gap: "20px",
         }}
       >
-        PRODUCTOS EN TU CARRITO
-      </h2>
-      <div className="contenedor-carts">
         {cart.map((product) => (
-          <div key={product.id} className="card-cart">
-            <div>
-              <h2 style={{ color: "purple", textTransform: "uppercase" }}>
-                {product.title}
-              </h2>
-              <h2>{product.price}</h2>
-              <h2>Cantidad: {product.quantity}</h2>
+          <Card
+            sx={{
+              maxWidth: 320,
+              padding: "10px",
+              backgroundColor: "linen",
+              margin: "20px",
+            }}
+            key={product.id}
+          >
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="300"
+                image={product.img}
+                alt=""
+                style={{
+                  border: "solid 1px",
+                  borderColor: "lightgray",
+                  width: "250px",
+                }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {product.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <div>Precio del producto: {product.price}</div>
+                  <div>Cantidad: {product.quantity}</div>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
               <IconButton onClick={() => deleteProductById(product.id)}>
-                <DeleteIcon color="action" />
+                <DeleteIcon color="secondary" />
               </IconButton>
-            </div>
-            <div>
-              <img className="img-cart" src={product.img} alt="" />
-            </div>
-          </div>
+            </CardActions>
+          </Card>
         ))}
       </div>
-
       {cart.length > 0 && (
         <div>
           <h3

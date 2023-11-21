@@ -15,16 +15,6 @@
   background-color: rgba(141, 88, 131, 0.418);
 }
 
-/* .swal2-confirm {
-  color: antiquewhite;
-  background-color: blueviolet;
-}
-
-.swal2-deny {
-  color: antiquewhite;
-  background-color: blueviolet;
-} */
-
 .custom-confirm-button {
   background-color: rgba(238, 130, 238, 0.499);
   color: black;
@@ -99,4 +89,19 @@
 .icon-wpp {
   width: 40px;
   height: auto;
+}
+
+.title-product-cart {
+  font-family: fuenteCart;
+  padding: 30px;
+  color: pink;
+  display: flex;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+@media (max-width: 320px) {
+  .title-product-cart {
+    font-size: 0.9375rem;
+  }
 }

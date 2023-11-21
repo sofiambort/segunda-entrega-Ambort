@@ -1,0 +1,32 @@
+.menu-list ul li {
+  position: relative;
+  padding: 1.25rem;
+  list-style-type: none;
+  color: purple;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.menu-list ul li::before,
+.menu-list ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: purple;
+  transition: width 0.4s ease; /* Ajusta la velocidad de la transición según tus preferencias */
+}
+
+.menu-list ul li::before {
+  left: 50%;
+}
+
+.menu-list ul li::after {
+  right: 50%;
+}
+
+.menu-list ul li:hover::before,
+.menu-list ul li:hover::after {
+  width: 50%;
+}

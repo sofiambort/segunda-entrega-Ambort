@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import ItemDatail from "./ItemDatail";
-import { useParams } from "react-router-dom"; //si uso el navigate, ponerlo aca
+import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 import { baseDatos } from "../../../firebaseConfig";

@@ -1,10 +1,16 @@
-import { useState, useEffect } from "react";
-import CartWidget from "../../common/cartWidget/CartWidget";
-import "./Navbar.css";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
+import "./NavBar.css";
+import CartWidget from "../../common/cartWidget/CartWidget";
+import TemporaryDrawer from "./TemporaryDrawer";
 
 export function Navbar() {
   const [scrolling, setScrolling] = useState(false);
+  const [mostrarDrawer, setMostrarDrawer] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,32 +27,36 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <>
-      <Link className={`navbar ${scrolling ? "scrolled" : ""}`}>
-        <Link to={"/"}>
-          <img
-            className="logo"
-            src="https://res.cloudinary.com/duu1rotxg/image/upload/v1695576333/logo_wqbusk.png"
-            alt="logo del website"
+    <Box
+      className={`navbar ${scrolling ? "scrolled" : ""}`}
+      sx={{ flexGrow: 1 }}
+    >
+      <AppBar style={{ backgroundColor: "linen" }} position="static">
+        <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+          <TemporaryDrawer
+            mostrarDrawer={mostrarDrawer}
+            setMostrarDrawer={setMostrarDrawer}
           />
-        </Link>
-        <ul>
-          <Link to={"/category/Interior"}>
-            <li>INTERIOR</li>
+
+          <Link to={"/"}>
+            <img
+              style={{
+                width: "100px",
+                height: "auto",
+                paddingTop: "10px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+              src="https://res.cloudinary.com/duu1rotxg/image/upload/v1695576333/logo_wqbusk.png"
+              alt="logo del website"
+            />
           </Link>
-          <Link to={"/category/Exterior"}>
-            <li>EXTERIOR</li>
-          </Link>
-          <Link to={"/category/Mantenimiento"}>
-            <li>MANTENIMIENTO</li>
-          </Link>
-          <Link to={"/category/Ambientación"}>
-            <li>AMBIENTACIÓN</li>
-          </Link>
-        </ul>
-        <CartWidget />
-      </Link>
-    </>
+
+          <CartWidget />
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }

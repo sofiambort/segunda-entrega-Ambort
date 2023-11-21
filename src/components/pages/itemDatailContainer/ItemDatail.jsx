@@ -6,7 +6,7 @@ const ItemDatail = ({ productSelected, onAdd, initial, showCounter }) => {
   return (
     <div style={{ paddingTop: "140px" }}>
       <div className="contenedor-detalle">
-        <div>
+        <div className="contenedor-img">
           <img className="imagen-planta" src={productSelected.img} alt="" />
         </div>
         <div className="detalles-contador">
@@ -14,16 +14,22 @@ const ItemDatail = ({ productSelected, onAdd, initial, showCounter }) => {
           <h3 className="description-datail">{productSelected.detalle}</h3>
           <h3 className="description-price">$ {productSelected.price}</h3>
 
-          {initial && <h5>Ya tienes {initial} unidades</h5>}
+          {initial && (
+            <h5 className="stock-alcanzado">Ya tienes {initial} unidades</h5>
+          )}
 
           {showCounter ? (
-            <CounterContainer
-              stock={productSelected.stock}
-              onAdd={onAdd}
-              initial={initial}
-            />
+            <div className="counter-datail">
+              <CounterContainer
+                stock={productSelected.stock}
+                onAdd={onAdd}
+                initial={initial}
+              />
+            </div>
           ) : (
-            <Link to="/cart">Terminar la compra</Link>
+            <Link className="fin-compra" to="/cart">
+              Terminar la compra
+            </Link>
           )}
         </div>
       </div>

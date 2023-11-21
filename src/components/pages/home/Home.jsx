@@ -6,6 +6,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { AspectRatio } from "@chakra-ui/react";
 
 export function Home() {
   const settings = {
@@ -74,37 +75,30 @@ export function Home() {
           </div>
         </Slider>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "50px",
-          marginTop: "100px",
-          marginBottom: "100px",
-          paddingTop: "70px",
-          paddingBottom: "70px",
-          fontFamily: "fuente",
-          textTransform: "uppercase",
-          backgroundColor: "linen",
-        }}
-      >
-        <div style={{ borderRight: "solid 1px", paddingRight: "100px" }}>
-          <LocalShippingIcon style={{ fontSize: "50px", color: "purple" }} />
-          <h4>Envio gratis en San Carlos Centro</h4>
-          <h5 style={{ color: "gray" }}>Con cargo en la zona</h5>
+      <div className="contenedor-datos">
+        <div className="envios">
+          <LocalShippingIcon className="envios-icon" />
+          <h4 className="detalles-contenedor-datos">
+            Envio gratis en San Carlos Centro
+          </h4>
+          <h5 className="zona">Con cargo en la zona</h5>
         </div>
-        <div style={{ borderRight: "solid 1px", paddingRight: "100px" }}>
-          <CreditCardIcon style={{ fontSize: "50px", color: "purple" }} />
-          <h4>Todos los medios de pago</h4>
+        <div className="medios-pago">
+          <CreditCardIcon className="medios-pago-icon" />
+          <h4 className="detalles-contenedor-datos">
+            Todos los medios de pago
+          </h4>
         </div>
         <div>
           <FontAwesomeIcon
+            className="contacto-icon"
             icon={faWhatsapp}
             size="3x"
-            style={{ paddingBottom: "8px" }}
             color="purple"
           />
-          <h4>Contactate con nosotros por Whatsapp</h4>
+          <h4 className="detalles-contenedor-datos">
+            Contactate con nosotros por Whatsapp
+          </h4>
         </div>
       </div>
       <div className="whatsapp-container">
@@ -113,6 +107,22 @@ export function Home() {
           src="https://res.cloudinary.com/duu1rotxg/image/upload/v1699613635/580b57fcd9996e24bc43c543_fcja2u.webp"
           alt="icono-wpp"
         />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "100px",
+        }}
+      >
+        <AspectRatio className="mapa" ratio={4 / 3}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.577656002326!2d-61.1020999246549!3d-31.7274300741199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b59d76acdf4ab1%3A0xb234c4fdb16003e2!2s25%20de%20Mayo%20%26%20Scalabrini%20Ortiz%2C%20San%20Carlos%20Centro%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1700069791821!5m2!1ses-419!2sar"
+            width="600"
+            height="450"
+          />
+        </AspectRatio>
       </div>
     </div>
   );

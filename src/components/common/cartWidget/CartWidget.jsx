@@ -10,7 +10,7 @@ const CartWidget = () => {
   let total = getTotalQuantity();
 
   return (
-    <Link to={"/cart"} className="cartWidget">
+    <Link to={"/cart"} style={{ marginTop: "15px" }}>
       <Badge badgeContent={total} showZero color="secondary">
         <ShoppingCartIcon color="action" />
       </Badge>

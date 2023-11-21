@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { baseDatos } from "../../../firebaseConfig";
 import { Link } from "react-router-dom";
+import { TextField, Button, Grid } from "@mui/material";
 
 const CheckOut = () => {
   const [canBuy, setCanBuy] = useState(false);
@@ -84,75 +85,88 @@ const CheckOut = () => {
   return (
     <>
       {orderId ? (
-        <div style={{ minHeight: "100vh" }}>
-          <h5
-            style={{
-              paddingTop: "350px",
-              display: "flex",
-              justifyContent: "center",
-              fontFamily: "fuenteGeneral",
-              fontSize: "25px",
-              color: "whitesmoke",
-            }}
-          >
-            Gracias por su compra!! Su N° de comprobante es: {orderId}
+        <div style={{ minHeight: "80vh" }}>
+          <h5 className="thanks-buy">
+            Gracias por su compra!! Su N° de comprobante es:
           </h5>
-          <Link
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              fontFamily: "fuenteGeneral",
-              fontSize: "25px",
-              color: "pink",
-            }}
-            to="/"
-          >
+          <h5 className="num-compra">{orderId}</h5>
+          <Link className="seguir-compra" to="/">
             SEGUIR COMPRANDO
           </Link>
         </div>
       ) : (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-            paddingTop: "150px",
-          }}
-        >
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="nombre"
-              onChange={handleChange}
-              placeholder="Nombre"
-            />
-            <span style={{ color: "red", fontSize: "8px" }}>
-              {errors.nombre}
-            </span>
-            <input
-              type="text"
-              name="apellido"
-              onChange={handleChange}
-              placeholder="Apellido"
-            />
-            <span style={{ color: "red", fontSize: "8px" }}>
-              {errors.apellido}
-            </span>
-            <input
-              type="text"
-              name="email"
-              onChange={handleChange}
-              placeholder="Email"
-            />
-            <span style={{ color: "red", fontSize: "8px" }}>
-              {errors.email}
-            </span>
-
-            <button disabled={!canBuy}>COMPRAR</button>
-            <button type="button" onClick={() => console.log("se cancelo")}>
-              CANCELAR
-            </button>
-          </form>
+        <div className="contenedor-gral">
+          <Grid
+            container
+            item
+            xs={12}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Grid item xs={10} md={8} className="contenedor-form">
+              <form onSubmit={handleSubmit}>
+                <Grid container className="form" spacing={2}>
+                  <Grid item xs={12}>
+                    <TextField
+                      name="nombre"
+                      onChange={handleChange}
+                      label="Nombre"
+                      variant="outlined"
+                      color="secondary"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      name="apellido"
+                      onChange={handleChange}
+                      label="Apellido"
+                      variant="outlined"
+                      color="secondary"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      name="email"
+                      onChange={handleChange}
+                      label="Email"
+                      variant="outlined"
+                      color="secondary"
+                      fullWidth
+                    />
+                  </Grid>
+                </Grid>
+                <Grid container justifyContent="center" spacing={1}>
+                  <Grid item xs={12} sm={4}>
+                    <Button
+                      disabled={!canBuy}
+                      style={{ marginTop: "30px" }}
+                      variant="contained"
+                      type="submit"
+                      color="secondary"
+                      fullWidth
+                    >
+                      COMPRAR
+                    </Button>
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <Button
+                      style={{ marginTop: "30px" }}
+                      variant="outlined"
+                      type="button"
+                      color="secondary"
+                      fullWidth
+                    >
+                      CANCELAR
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </Grid>
+          </Grid>
 
           <div className="whatsapp-container">
             <img

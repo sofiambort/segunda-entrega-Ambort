@@ -14,3 +14,115 @@
   width: 40px;
   height: auto;
 }
+
+.fondo-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: linen;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.fondo-form-content {
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor-form {
+  background-color: OldLace;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.689);
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contenedor-gral {
+  height: 80vh;
+  display: grid;
+  grid-auto-columns: 1fr;
+  place-items: center;
+  padding-top: 8.75rem;
+}
+
+.thanks-buy {
+  padding-top: 18.75rem;
+  display: flex;
+  justify-content: center;
+  font-family: fuenteGeneral;
+  font-size: 1.5625rem;
+  color: whitesmoke;
+  word-spacing: 0.3125rem;
+}
+.num-compra {
+  display: flex;
+  justify-content: center;
+  font-family: fuenteGeneral;
+  font-size: 1.5625rem;
+  color: rgb(187, 131, 240);
+  word-spacing: 0.3125rem;
+}
+
+.seguir-compra {
+  display: flex;
+  justify-content: center;
+  font-family: fuenteGeneral;
+  font-size: 1.5625rem;
+  color: pink;
+}
+
+@media (max-width: 1440px) {
+  .thanks-buy {
+    padding-top: 21.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contenedor-gral {
+    height: 100vh;
+  }
+  .thanks-buy {
+    padding-top: 17.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-form {
+    font-size: 1rem;
+  }
+  .thanks-buy {
+    font-size: 1.0625rem;
+  }
+  .seguir-compra {
+    font-size: 1.25rem;
+  }
+  .num-compra {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .thanks-buy {
+    font-size: 1rem;
+  }
+  .seguir-compra {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .thanks-buy {
+    font-size: 0.75rem;
+  }
+}

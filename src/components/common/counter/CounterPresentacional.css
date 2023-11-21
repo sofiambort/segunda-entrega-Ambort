@@ -36,3 +36,76 @@
   font-size: 1.125rem;
   width: 9.375rem;
 }
+
+.counter {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+}
+.contenedor-counter {
+  display: flex;
+  gap: 1.875rem;
+  justify-content: center;
+}
+
+.add-num {
+  font-size: 25px;
+  color: black;
+}
+
+.stock-disp {
+  border: solid 1px;
+  border-color: purple;
+  padding: 5px;
+  color: black;
+}
+
+@media (max-width: 1440px) {
+  .contenedor-counter {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contenedor-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .counter {
+    gap: 0.625rem;
+  }
+  .contenedor-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .boton-restar {
+    width: 30px;
+    height: 25px;
+  }
+  .boton-sumar {
+    width: 30px;
+    height: 25px;
+    font-size: 15px;
+  }
+  .add-num {
+    font-size: 1.25rem;
+  }
+  .boton-agregar-carrito {
+    height: 1.5625rem;
+  }
+  .stock-disp {
+    padding: 2px;
+  }
+}

@@ -4,6 +4,7 @@
 }
 .contenedor-detalle {
   display: flex;
+  align-items: center;
   gap: 3.125rem;
   padding: 6.25rem;
   border: solid 0.0625rem;
@@ -12,10 +13,11 @@
   font-family: "fuenteGeneral", sans-serif;
   color: black;
   background-color: linen;
+  height: 90vh;
 }
 
 .imagen-planta {
-  width: 300px;
+  width: 18.75rem;
   height: auto;
   display: flex;
   border-radius: 0.3125rem;
@@ -36,6 +38,7 @@
 
 .description-datail {
   padding: 3.125rem;
+  color: rgba(128, 0, 128, 0.662);
 }
 
 .whatsapp-container {
@@ -50,7 +53,89 @@
   height: auto;
 }
 
+.contenedor-img {
+  display: flex;
+  align-items: center;
+}
+
+.counter-datail {
+  border-top: solid 1px;
+  border-color: rgba(128, 128, 128, 0.534);
+  padding-top: 1.5625rem;
+  margin-top: 1.25rem;
+}
 .description-price {
-  padding-bottom: 30px;
-  padding-left: 3.125rem;
+  color: purple;
+  font-weight: 700;
+}
+
+.stock-alcanzado {
+  font-family: fuenteGeneral;
+  font-size: 20px;
+  color: purple;
+  margin-bottom: 1.25rem;
+}
+
+.fin-compra {
+  font-family: fuenteGeneral;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .titulo-datail {
+    font-size: 1.5625rem;
+  }
+  .description-datail {
+    font-size: 0.75rem;
+    padding: 1.25rem;
+  }
+  .contenedor-detalle {
+    padding: 3.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imagen-planta {
+    width: 15.625rem;
+  }
+  .titulo-datail {
+    font-size: 1.25rem;
+  }
+  .description-datail {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .contenedor-detalle {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 0.625rem;
+    justify-items: center;
+    gap: 0rem;
+    height: auto;
+  }
+  .imagen-planta {
+    width: 9.375rem;
+    margin: 0.625rem;
+  }
+  .titulo-datail {
+    padding-top: 1.25rem;
+    font-size: 16px;
+  }
+  .stock-alcanzado {
+    font-size: 0.75rem;
+  }
+  .fin-compra {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
 }

@@ -19,6 +19,7 @@ const ProductCard = ({ item }) => {
         paddingRight: "5px",
         paddingLeft: "5px",
         backgroundColor: "linen",
+        margin: "20px",
       }}
     >
       <CardMedia sx={{ height: 300 }} image={item.img} title={item.category} />

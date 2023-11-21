@@ -7,14 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-container">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            paddingTop: "40px",
-            margin: "30px",
-          }}
-        >
+        <div className="footer-container2">
           <div>
             <h5 className="footer-effect">
               Copyright 2023 © Vivero un jardín para Artemisa
@@ -25,7 +18,7 @@ const Footer = () => {
               Scalabrini Ortiz y 25 de Mayo - San Carlos Centro
             </h5>
           </div>
-          <div style={{ display: "flex", gap: "50px" }}>
+          <div className="redes">
             <BsFacebook
               style={{ width: "20px", height: "auto" }}
               className="footer-effect"

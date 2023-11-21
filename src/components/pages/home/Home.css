@@ -50,3 +50,153 @@
   width: 40px;
   height: auto;
 }
+
+.contenedor-datos {
+  display: flex;
+  justify-content: center;
+  gap: 3.125rem;
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  font-family: "fuente";
+  text-transform: uppercase;
+  background-color: linen;
+}
+
+.envios {
+  border-right: solid 1px;
+  padding-right: 100px;
+}
+
+.envios-icon {
+  color: purple;
+  font-size: 3.125rem;
+}
+
+.zona {
+  color: gray;
+}
+
+.medios-pago {
+  border-right: solid 1px;
+  padding-right: 100px;
+}
+
+.medios-pago-icon {
+  font-size: 3.125rem;
+  color: purple;
+}
+
+.contacto-icon {
+  padding-bottom: 0.5rem;
+  width: 1.25rem;
+  height: auto;
+}
+
+.mapa {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 2560px) {
+  .img-carrusel {
+    width: 90%;
+    height: 23.125rem;
+  }
+
+  .contenedor-datos {
+    gap: 9.375rem;
+  }
+}
+@media (max-width: 1440px) {
+  .img-carrusel {
+    width: 90%;
+    height: 17.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .img-carrusel {
+    width: 90%;
+    height: 13.75rem;
+  }
+
+  .contenedor-datos {
+    gap: 1.875rem;
+    padding: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-carrusel {
+    width: 90%;
+    height: 180px;
+  }
+  .contenedor-datos {
+    justify-items: center;
+  }
+  .envios {
+    border-right: 0rem;
+    padding-right: 0px;
+    border-right: solid 0.0625rem;
+  }
+  .medios-pago {
+    border-right: 0px;
+    padding-right: 0px;
+    border-right: solid 0.0625rem;
+  }
+  .mapa {
+    width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contenedor-datos {
+    flex-direction: column;
+  }
+  .envios {
+    border-right: 0rem;
+  }
+  .medios-pago {
+    border-right: 0rem;
+  }
+  .portada {
+    margin-top: 0rem;
+  }
+  .carrusel {
+    margin-top: 1.875rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 1.875rem;
+  }
+  .img-carrusel {
+    width: 90%;
+    height: 6.25rem;
+  }
+  .contenedor-datos {
+    margin-top: 3.125rem;
+    font-size: 10px;
+    background-color: rgb(250, 240, 230);
+    padding-left: 4.6875rem;
+  }
+  .mapa {
+    width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .contenedor-datos {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .contenedor-datos {
+    margin-bottom: 4.375rem;
+  }
+  .img-carrusel {
+    width: 90%;
+    height: 70px;
+  }
+}
