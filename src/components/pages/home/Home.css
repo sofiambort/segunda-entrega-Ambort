@@ -135,7 +135,7 @@
   }
   .contenedor-datos {
     flex-direction: column;
-    padding-left: 15.625rem;
+    padding-left: 30%;
   }
   .envios {
     border-right: 0rem;
